@@ -43,36 +43,35 @@ conda install torchvision=0.8.0
 
 ```
 ├── backbone
-|   ├── untils
+|   ├── utils
 |   |   └── modules.py          # samplers for meta tra
 |   └── ResNet18.py             # samplers for meta trai
 ├── datasets 
-|   ├── untils
-|   |   ├──continual_dataset.py # data loader for all datasets
-|   |   └── validation.py       # samplers for meta trai
+|   ├── utils
+|   |   ├──continual_dataset.py # evaluation settings on dataset
+|   |   └── validation.py       # validation dataset
 |   ├── transforms
-|   |   └──denormalization.py   # data loader for all datasets
-|   └── seq_cifar10.py          # samplers for meta train
+|   |   └──denormalization.py   # normalizes tensor
+|   └── seq_cifar10.py          # data loader for cifar10
 ├── models
-|   ├── untils
-|   |   └──continual_model.py   # data loader for all datasets
-|   ├── hcr.py                  # meta-transfer class
-|   ├── joint.py                # resnet class
-|   └── sgd.py                  # meta-transfer convolution class
-|   └── meta.py                 # meta-train trainer class
+|   ├── utils
+|   |   └──continual_model.py   # construct continual learning model
+|   ├── hcr.py                  # our model
+|   ├── joint.py                # upper bound
+|   └── sgd.py                  # lower bound
 ├── utils                       
-|   ├── args.py                 # GPU tool functions
-|   ├── best_args.py            # meta-transfer class
-|   ├── buffer.py               # resnet class
-|   ├── conf.py                 # GPU tool functions
-|   ├── loggers.py              # meta-transfer class
-|   ├── metrics.py              # resnet class
-|   ├── status.py               # GPU tool functions
-|   ├── tb_logger.py            # meta-transfer class
-|   ├── training.py             # resnet class
-|   └── triplet.py              # miscellaneous tool functions
-├── main.py                     # the python file with main function and parameter settings
-└── cifar.py                    # the script to run meta-train and meta-test phases
+|   ├── args.py                 # adds the arguments used in the whole process
+|   ├── best_args.py            # arguments
+|   ├── buffer.py               # sampling methods and memory buffer
+|   ├── conf.py                 # sets seeds and returns the device and base bath
+|   ├── loggers.py              # logs the results
+|   ├── metrics.py              # defines FWT and BWT
+|   ├── status.py               # displays the process
+|   ├── tb_logger.py            # logs current accuracy value and loss value
+|   ├── training.py             # training process
+|   └── triplet.py              # constructs triplets
+├── main.py                     # the python file with main function 
+└── cifar.py                    # the experiment on cifar-10
 ```
 
 ## Running Experiments
