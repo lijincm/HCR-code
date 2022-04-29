@@ -34,8 +34,8 @@ You may download Anaconda and read the installation instruction on their officia
 Create a new environment and install PyTorch and torchvision on it:
 
 ```bash
-conda create --name mtl-pytorch python=3.7
-conda activate mtl-pytorch
+conda create --name hcr-pytorch python=3.7
+conda activate hcr-pytorch
 conda install torch=1.7.1 
 conda install torchvision=0.8.0
 ```
