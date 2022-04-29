@@ -44,7 +44,7 @@ conda install torchvision=0.8.0
 ```
 ├── backbone
 |   ├── utils
-|   |   └── modules.py          # 
+|   |   └── modules.py          # constructs backbone
 |   └── ResNet18.py             # uses this net  extract features
 ├── datasets 
 |   ├── utils
