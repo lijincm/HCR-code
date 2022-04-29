@@ -12,7 +12,7 @@ Our implementations use the source code from the following repository and user:
 * [Dark Experience for General Continual Learning](https://github.com/aimagelab/mammoth)
 
 
-# Meta-Transfer Learning PyTorch
+# Hierarchical Correlations Replay for Continual Learning  PyTorch
 [![Python](https://img.shields.io/badge/python-3.7-blue.svg?style=flat-square&logo=python&color=3776AB)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/torch-1.7.1-%237732a8?style=flat-square&logo=PyTorch&color=EE4C2C)](https://pytorch.org/)
 
@@ -44,8 +44,8 @@ conda install torchvision=0.8.0
 ```
 ├── backbone
 |   ├── utils
-|   |   └── modules.py          # samplers for meta tra
-|   └── ResNet18.py             # samplers for meta trai
+|   |   └── modules.py          # 
+|   └── ResNet18.py             # uses this net  extract features
 ├── datasets 
 |   ├── utils
 |   |   ├──continual_dataset.py # evaluation settings on dataset
